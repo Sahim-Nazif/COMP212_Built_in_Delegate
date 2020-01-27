@@ -39,7 +39,24 @@ namespace COMP212_Excercise01_Built_in_Delegate
         
         static void Main(string[] args)
         {
-            
+            //built-in Func<> Delegate Predicate
+            //here the last string is the output or result/
+            //the output will be small.
+            Func<string, string, string, string> smallestOfAll = Minimum;
+            string result = smallestOfAll.Invoke("small", "smallest", "smallers");
+            Console.WriteLine(result);
+
+            //the output will be 88
+            Action<int, int, int> AvgGrades = AvgGrade;
+            AvgGrades.Invoke(79, 90, 95);
+
+            /*It's clear from the instruction that Func<> can be used with return type of methods
+             *and Action<> can be use with void or method that doesn't return a value
+             * Important to add that Predicate<> delegate can be use with a boolean return type
+             * method
+             */
+
+
         }
     }
 }
