@@ -14,7 +14,7 @@ namespace COMP212_Excercise01_Built_in_Delegate
 {
     class Program
     {
-        //Task1-- Creating method
+        //Task1-- Creating method with three  parameters
         public static string Minimum(string small, string smallest, string smallers)
         {
             if(small.Length>smallest.Length)
@@ -30,10 +30,16 @@ namespace COMP212_Excercise01_Built_in_Delegate
                 return small;
             }
         }
+        //Task 2-- Creating  void method with three parameters
+        public static void AvgGrade(int grade1, int grade2, int grade3)
+        {
+            int averageGrade = (grade1 + grade2 + grade3) / 3;
+            Console.WriteLine(averageGrade);
+        }
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
